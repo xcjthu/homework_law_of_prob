@@ -123,7 +123,7 @@ begin = datetime.datetime.now()
 svm_model.fit(train_x, label)
 end = datetime.datetime.now()
 k = end - begin
-print('MNB训练时长：', k.total_seconds())
+print('SVM训练时长：', k.total_seconds())
 
 predict_save(svm_model, 'svm.json')
 m('svm.json')
@@ -134,7 +134,7 @@ begin = datetime.datetime.now()
 knn.fit(train_x, label)
 end = datetime.datetime.now()
 k = end - begin
-print('训练时长：', k.total_seconds())
+print('KNN训练时长：', k.total_seconds())
 
 predict_save(knn, 'knn.json')
 m('knn.json')
@@ -146,7 +146,7 @@ begin = datetime.datetime.now()
 mlp.fit(train_x, label)
 end = datetime.datetime.now()
 k = end - begin
-print('训练时长：', k.total_seconds())
+print('感知机训练时长：', k.total_seconds())
 
 predict_save(mlp, 'mlp.json')
 m('mlp.json')
@@ -158,7 +158,7 @@ begin = datetime.datetime.now()
 clf.fit(train_x, label)
 end = datetime.datetime.now()
 k = end - begin
-print('MNB训练时长：', k.total_seconds())
+print('决策树训练时长：', k.total_seconds())
 
 predict_save(clf, 'clf.json')
 m('clf.json')
